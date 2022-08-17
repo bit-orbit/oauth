@@ -69,6 +69,10 @@ passport.use(
   )
 );
 
+app.get("/", (req, res) => {
+  res.send("ok");
+});
+
 app.get(
   "/auth/github",
   passport.authenticate("github", { scope: ["user:email", "repo"] })
